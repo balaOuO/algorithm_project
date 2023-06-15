@@ -2,7 +2,7 @@ import pygame
 import time 
 import json
 from floor import Floor
-from Elevator import Elevator
+from elevator import Elevator
 
 # load setting
 with open('config.json') as f:
