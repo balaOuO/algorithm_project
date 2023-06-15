@@ -4,5 +4,6 @@
     "floor": "5",
     "floor_height": "5",
     "elevator_width": "50",
-    "elevator_height": "100"
+    "elevator_height": "100",
+    "elevator_speed": "1"
 }
