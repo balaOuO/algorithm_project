@@ -27,7 +27,10 @@ def main():
     pygame.display.set_caption("Elevator Simulator")
 
     # 創建電梯物件
-    elevator = Elevator(x = 700, y = 500)
+    elevator = Elevator(width = elevator_width, 
+                        height = elevator_height, 
+                        x = 700,  
+                        y = 500)
     # 創建樓層物件
     floor = [Floor( x = 0, 
                     y = (window_height // (floor_size)) * (i + 1) - floor_height , 
@@ -43,11 +46,10 @@ def main():
             if event.type == pygame.QUIT:
                 running = False
         screen.fill((0, 0, 0))  # 清空畫面
-        elevator.control(screen)
+        elevator.draw(screen)
         for i in floor:
             i.draw(screen)
         pygame.display.update()
-        time.sleep(0.02)
 
     pygame.quit()
 
